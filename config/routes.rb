@@ -4,4 +4,6 @@ Rails.application.routes.draw do
       resources :actors
     end
   end
+
+  root 'api/v1/actors#index'
 end
