@@ -53,7 +53,7 @@ Rails.application.configure do
   # fix ==> Response body is not available to scripts (Reason: CORS Missing Allow Origin)
   config.middleware.insert_before 0, Rack::Cors do
     allow do
-      origins 'localhost:3000' # Thay đổi domain của trang web ReactJS của bạn
+      origins 'https://reactjs-crud.onrender.com' # Thay đổi domain của trang web ReactJS của bạn
       resource '*',
         headers: :any,
         methods: [:get, :post, :put, :patch, :delete, :options, :head],

@@ -104,7 +104,7 @@ Rails.application.configure do
   # config.active_record.database_resolver_context = ActiveRecord::Middleware::DatabaseSelector::Resolver::Session
   config.middleware.insert_before 0, Rack::Cors do
     allow do
-      origins ENV["FE_HOST"] # Địa chỉ của frontend trong production
+      origins 'https://reactjs-crud.onrender.com' # Địa chỉ của frontend trong production
       resource '*',
         headers: :any,
         methods: [:get, :post, :put, :patch, :delete, :options, :head],
